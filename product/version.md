@@ -2,9 +2,9 @@
 
 ### MySQL产品机型
 
-云数据库UDB MySQL提供NVMe型、通用型、共享型等多种机型，不管是哪一种机型，UDB-MySQL的可靠性、持久性和读写性能都会满足产品SLA承诺。
+云数据库UDB MySQL提供NVMe型、O2型、通用型、共享型等多种机型，不管是哪一种机型，UDB-MySQL的可靠性、持久性和读写性能都会满足产品SLA承诺。
 
-NVMe机型的数据库实例，采用业内主流的计算存储分离架构：计算层使用高性能UCloud快杰云主机，存储层采用超高性能RDMA NVMe SSD云盘。RSSD云盘基于新一代分布式块存储架构，底层以NVMe SSD为存储介质，网络传输使用RDMA，为用户提供单盘最高达120万的随机读写能力和更低的单路时延能力。IOPS与容量对应关系：磁盘大小在1T以下时IOPS优化为固定值50000，1T以上按照固定的[分配算法](https://docs.ucloud.cn/udisk/introduction/performance/account?id=性能对比)计算IOPS，最大IOPS为120万。磁盘步长为10GB，支持大容量存储，最大容量可达32T。
+NVMe机型和O2机型的数据库实例，采用业内主流的计算存储分离架构：计算层使用高性能UCloud快杰云主机，存储层采用超高性能RDMA NVMe SSD云盘。RSSD云盘基于新一代分布式块存储架构，底层以NVMe SSD为存储介质，网络传输使用RDMA，为用户提供单盘最高达120万的随机读写能力和更低的单路时延能力。IOPS与容量对应关系：磁盘大小在1T以下时IOPS优化为固定值50000，1T以上按照固定的[分配算法](https://docs.ucloud.cn/udisk/introduction/performance/account?id=性能对比)计算IOPS，最大IOPS为120万。磁盘步长为10GB，支持大容量存储，最大容量可达32T。
 
 通用型数据库实例，一般部署于未提供NVMe机型的可用区。采用计算与存储分离架构，底层存储采用SSD云盘。
 
