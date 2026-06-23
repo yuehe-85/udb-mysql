@@ -34,7 +34,7 @@
 | 内存 | 110 元/G/月   |
 | 硬盘 | 43.2 元/10G/月 |
 
-备注：别的可用区价格见价格计算器https://www.ucloud.cn/site/calculator.html#/udb-mysql 控制台
+备注：其余可用区价格见价格计算器https://www.ucloud.cn/site/calculator.html#/udb-mysql 或访问控制台https://console.ucloud.cn/udb/mysql/create
 
 
 ### 2. 普通版/只读从库单价
@@ -45,7 +45,7 @@
 | 内存 | 55 元/G/月    |
 | 硬盘 | 21.6 元/10G/月 |
 
-备注：别的可用区价格见价格计算器https://www.ucloud.cn/site/calculator.html#/udb-mysql 控制台
+备注：其余可用区价格见价格计算器https://www.ucloud.cn/site/calculator.html#/udb-mysql 或访问控制台https://console.ucloud.cn/udb/mysql/create
 
 
 ### 3.备份
