@@ -36,6 +36,7 @@
     * [SSL](/udb-mysql/guide/ssl)
     * [批量升降级](/udb-mysql/guide/batch_upgrade)
     * [外网访问](/udb-mysql/guide/external)
+    * [手动主备切换](/udb-mysql/guide/manual_failover)
 * [数据库代理](/udb-mysql/udb-proxy/udb-proxy)
 * [基准测试](/udb-mysql/test)
 * [FAQs](/udb-mysql/faqs)
