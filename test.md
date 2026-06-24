@@ -2,7 +2,7 @@
 
 基准测试（benchmark）是针对系统设计的一种压力测试，目标是为了掌握系统的行为。
 sysbench作为一款优秀的MySQL基准测试工具为业界所认可。
-本文应用sysbench在不同并发线程、测试持续时间15分钟的条件下，对MySQL九种不同配置机型，五种不同数据量场景，进行了测试，得出了QPS和TPS数据。
+本文应用sysbench在不同并发线程、测试持续时间15分钟的条件下，对MySQL NVMe型和O2型的九种规格，五种不同数据量场景，进行了测试，得出了QPS和TPS数据。
 
 ## 测试环境
 压测机器配置：32C64G，200G系统盘
@@ -37,3 +37,18 @@ sysbench /usr/share/sysbench/oltp_read_write.lua --tables= --table-size= --m
 | <font style="color:#000000;">16核32G</font> | <font style="color:#000000;">60000000</font> | <font style="color:#000000;">30</font> | <font style="color:#000000;">64</font> | <font style="color:#000000;">58015.18</font> | <font style="color:#000000;">2900.76</font> | <font style="color:#000000;">36.24</font> |
 | <font style="color:#000000;">16核64G</font> | <font style="color:#000000;">60000000</font> | <font style="color:#000000;">64</font> | <font style="color:#000000;">64</font> | <font style="color:#000000;">46652.26</font> | <font style="color:#000000;">2332.61</font> | <font style="color:#000000;">49.21</font> |
 
+## O2 型
+
+![image](/images/qps_tps_o2.png)
+
+| <font style="color:#000000;">规格</font> | <font style="color:#000000;">单表数据量</font> | <font style="color:#000000;">表数量</font> | <font style="color:#000000;">sysbench线程数</font> | <font style="color:#000000;">QPS</font> | <font style="color:#000000;">TPS</font> | <font style="color:#000000;">avg_lst(95)</font> |
+| --- | --- | --- | --- | --- | --- | --- |
+| <font style="color:#000000;">2核4G</font> | <font style="color:#000000;">1000000</font> | <font style="color:#000000;">100</font> | <font style="color:#000000;">8</font> | <font style="color:#000000;">25123.72</font> | <font style="color:#000000;">1256.19</font> | <font style="color:#000000;">10.27</font> |
+| <font style="color:#000000;">4核8G</font> | <font style="color:#000000;">1000000</font> | <font style="color:#000000;">100</font> | <font style="color:#000000;">16</font> | <font style="color:#000000;">52575.08</font> | <font style="color:#000000;">2628.75</font> | <font style="color:#000000;">25.28</font> |
+| <font style="color:#000000;">4核16G</font> | <font style="color:#000000;">1000000</font> | <font style="color:#000000;">100</font> | <font style="color:#000000;">32</font> | <font style="color:#000000;">56008.07</font> | <font style="color:#000000;">2800.40</font> | <font style="color:#000000;">24.83</font> |
+| <font style="color:#000000;">4核32G</font> | <font style="color:#000000;">1000000</font> | <font style="color:#000000;">100</font> | <font style="color:#000000;">64</font> | <font style="color:#000000;">58795.14</font> | <font style="color:#000000;">2939.76</font> | <font style="color:#000000;">57.87</font> |
+| <font style="color:#000000;">8核16G</font> | <font style="color:#000000;">1000000</font> | <font style="color:#000000;">100</font> | <font style="color:#000000;">32</font> | <font style="color:#000000;">97303.28</font> | <font style="color:#000000;">4865.16</font> | <font style="color:#000000;">11.04</font> |
+| <font style="color:#000000;">8核32G</font> | <font style="color:#000000;">1000000</font> | <font style="color:#000000;">100</font> | <font style="color:#000000;">64</font> | <font style="color:#000000;">109638.16</font> | <font style="color:#000000;">5481.91</font> | <font style="color:#000000;">8.43</font> |
+| <font style="color:#000000;">8核64G</font> | <font style="color:#000000;">1000000</font> | <font style="color:#000000;">100</font> | <font style="color:#000000;">64</font> | <font style="color:#000000;">107993.83</font> | <font style="color:#000000;">5399.69</font> | <font style="color:#000000;">25.74</font> |
+| <font style="color:#000000;">16核32G</font> | <font style="color:#000000;">1000000</font> | <font style="color:#000000;">100</font> | <font style="color:#000000;">128</font> | <font style="color:#000000;">180871.33</font> | <font style="color:#000000;">9043.57</font> | <font style="color:#000000;">20.00</font> |
+| <font style="color:#000000;">16核64G</font> | <font style="color:#000000;">1000000</font> | <font style="color:#000000;">100</font> | <font style="color:#000000;">256</font> | <font style="color:#000000;">182659.66</font> | <font style="color:#000000;">9132.98</font> | <font style="color:#000000;">51.94</font> |

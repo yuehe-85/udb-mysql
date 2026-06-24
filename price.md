@@ -22,6 +22,32 @@
 | 硬盘 | 6.5 元/10G/月 | 16.2 元/10G/月       | 11 元/10G/月                |
 
 
+## O2型MySQL
+目前已在巴西（圣保罗）、乌兹别克斯坦（塔什干）、哈萨克斯坦（阿拉木图）、美国（丹佛）等地域上线
+
+### 1. 高可用版单价
+
+
+| 计费项   | 巴西（圣保罗） |
+| :--- | :---         |
+| CPU  | 218 元/核/月 |
+| 内存 | 110 元/G/月   |
+| 硬盘 | 43.2 元/10G/月 |
+
+备注：其余可用区价格见价格计算器https://www.ucloud.cn/site/calculator.html#/udb-mysql 或访问控制台https://console.ucloud.cn/udb/mysql/create
+
+
+### 2. 普通版/只读从库单价
+
+| 计费项   | 巴西（圣保罗） |
+| :--- | :---          |
+| CPU  | 109 元/核/月   |
+| 内存 | 55 元/G/月    |
+| 硬盘 | 21.6 元/10G/月 |
+
+备注：其余可用区价格见价格计算器https://www.ucloud.cn/site/calculator.html#/udb-mysql 或访问控制台https://console.ucloud.cn/udb/mysql/create
+
+
 ### 3.备份
 
 #### 3.1 Binlog备份服务
